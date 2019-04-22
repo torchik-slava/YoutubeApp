@@ -1,1 +1,63 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>youtube</title>   
+  <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Josefin+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="src/styles/style.css">
+</head>
+<body>  
+  
+<template id="frame_tepml">
+	<div class="search_block"> 
+	  <input id="search" class="search" type="text" placeholder="Search...">
+	  <button class="search_btn"></button>
+	</div>
+	<div id="carousel" class="carousel">
+	  <button class="arrow prev"></button>
+	  <div class="ul_frame">	    
+      <ul>
+        <li class="greeting">
+          <p>
+          Hi! This App <img src="src/img/robot.svg" width="40px" height="40px"> can collect some info about youtube-clips           
+          for you. Just type <img src="src/img/keyboard.svg" width="40px" height="40px"> the key
+          words and press search <img src="src/img/search.svg" width="40px" height="40px"> to start. If you want to watch 
+          <img src="src/img/video.svg" width="40px" height="40px"> the video  just follow the link 
+          <img src="src/img/link.svg" width="40px" height="40px"> and watch it on youtube.com 
+          <img src="src/img/youtube.svg" width="40px" height="40px">.
+          </p>
+        </li>
+        </ul>
+      <div id="loader" class="loader">  
+        <div class="circle_path">
+          <div class="holder">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+	  </div>
+	  <button class="arrow next"></button>
+	  <p class="pagination"></p>
+	</div>
+</template>
+
+<template id="card_tepml">
+  <div class="title_wrapper">
+    <a href="" class="video_title"></a>
+  </div>  
+  <img src="" class="logo">  
+  <ul class="video_info">
+    <li class="author"><i><img src="src/img/author.svg"></i><span title=""></span></li>
+    <li class="date"><i><img src="src/img/date.svg"></i><span></span></li>
+    <li class="views"><i><img src="src/img/views.svg"></i><span></span></li>
+    <li class="likes"><i><img src="src/img/like.svg"></i><span></span></li>
+    <li class="dislikes"><i><img src="src/img/dislike.svg"></i><span></span></li>
+    <li class="comments"><i><img src="src/img/comments.svg"></i><span></span></li>
+  </ul>
+  <p class="video_description"><b>DESCRIPTION: </b></p>
+</template>
+ 
+  <script type="module" src="src/index.js"></script>
+</body>
+</html>
