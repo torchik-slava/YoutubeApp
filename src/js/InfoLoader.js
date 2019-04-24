@@ -30,7 +30,6 @@ export default class InfoLoader {
 	}
 	
 	loadInfo (query, callback) {
-		if(this.pageParams['pageToken'] === 'last page') return;
 		if(query) this.pageParams['q'] = 'q=' + query;		
 		fetch(this._linkGenerate(this.pageParams, this.requestType[0]))
 		.then(res => res.json())

@@ -1,10 +1,10 @@
 export default class Drawer {
 
-  constructor () {  	
+  constructor () {
 		this.frameLength = 0;
     this.cardLength = 0;
 		this.cardsAmount = 0;
-		this.position = 0;		
+		this.position = 0;
   }
 
 	calcCoordinates () {
@@ -16,7 +16,7 @@ export default class Drawer {
 	drawFrame () {
 		let fragment = document.createDocumentFragment();
   	fragment.appendChild(frame_tepml.content.cloneNode(true));
-		document.body.appendChild(fragment);		 		
+		document.body.appendChild(fragment);
 	}
 
 	showPagin () {
@@ -24,8 +24,8 @@ export default class Drawer {
 		let last = first+this.cardsAmount-1;
 		if (first!=last) {
 			document.body.querySelector('.pagination').textContent = first + ' - ' + last + ' out of ' + document.body.querySelectorAll('.card').length;
-		} else document.body.querySelector('.pagination').textContent = first + ' out of ' + document.body.querySelectorAll('.card').length; 
-  	
+		} else document.body.querySelector('.pagination').textContent = first + ' out of ' + document.body.querySelectorAll('.card').length;
+
 	}
 
 	moveAt (position) {
@@ -33,9 +33,14 @@ export default class Drawer {
 		document.body.querySelector('ul').style.marginLeft = this.position + 'px';
 	}
 
-  showControls () {
-    document.body.querySelector('.prev').style.visibility = 'visible';
-    document.body.querySelector('.next').style.visibility = 'visible';
+  _showControls (confirmation) {
+		if (confirmation){
+			document.body.querySelector('.prev').style.visibility = 'visible';
+    	document.body.querySelector('.next').style.visibility = 'visible';
+		} else {
+			document.body.querySelector('.prev').style.visibility = 'hidden';
+    	document.body.querySelector('.next').style.visibility = 'hidden';
+		}
   }
 
 	clearCarusel () {
@@ -44,7 +49,7 @@ export default class Drawer {
     document.body.querySelector('.pagination').innerHTML = '';
     document.body.querySelector('.prev').style.visibility = '';
     document.body.querySelector('.next').style.visibility = '';
-	} 
+	}
 
 	_fillCard (item, content) {
 	  item.querySelector('img').setAttribute('src', content.snippet.thumbnails.medium.url);
@@ -58,30 +63,32 @@ export default class Drawer {
 	  item.querySelector('.dislikes span').textContent = content.statistics.dislikeCount || 'live';
 	  item.querySelector('.comments span').textContent = content.statistics.commentCount || 'live';
 	  item.querySelector('.video_description').innerHTML += content.snippet.description || 'no description to this video';
-	  item.querySelector('.video_description').title = content.snippet.description;	
+	  item.querySelector('.video_description').title = content.snippet.description;
 	}
 
-	loaderShow (confirmation) {		
+	loaderShow (confirmation) {
 		let loaderBlock = document.getElementById('loader');
 		if(confirmation) {
 			loaderBlock.style.display = 'flex';
+			this._showControls(false);
 		} else {
-			loaderBlock.style.display = '';			
+			loaderBlock.style.display = '';
+			this._showControls(true);
 		}
 	}
 
-	drawCards (data) {		
-		let fragment = document.createDocumentFragment();		
+	drawCards (data) {
+		let fragment = document.createDocumentFragment();
   	for (let i = 0; i < data.items.length; i++) {
     	let card = document.createElement('li');
     	card.classList.add('card');
-    	card.appendChild(card_tepml.content.cloneNode(true));  
+    	card.appendChild(card_tepml.content.cloneNode(true));
     	this._fillCard(card, data.items[i]);
-    	fragment.appendChild(card);
+      fragment.appendChild(card);
   	}
 		document.body.querySelector('ul').appendChild(fragment);
-		this.calcCoordinates();   
+		this.calcCoordinates();
     this.loaderShow(false);
-    this.showControls();    	  	
+    if(-(this.position/this.cardLength) + this.cardsAmount > document.body.querySelectorAll('.card').length - data.items.length) {this.showPagin();}
 	}
 }
