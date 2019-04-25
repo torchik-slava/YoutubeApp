@@ -4,6 +4,7 @@ import Drawer from './Drawer.js';
 export default class Controller {
 
 	constructor () {
+    this.touchPosition = null;
 		this.delayState = false;
 		this.loader = new InfoLoader();
 		this.drawer = new Drawer();
@@ -26,7 +27,19 @@ export default class Controller {
 		let position = Math.min(this.drawer.position + this.drawer.frameLength, 0)
   	this.drawer.moveAt(position);
   	this.drawer.showPagin();
-	}
+  }
+
+  trackTouchPosition (event) {
+    this.touchPosition = event.changedTouches[0].clientX;
+  }
+
+  makeSwiping (event) {
+    let lastTouchPosition = event.changedTouches[0].clientX;
+    let screenSize = event.view.innerWidth;
+    let result = (this.touchPosition - lastTouchPosition)/screenSize;
+    if (result > 0.3) this.nextMove();
+    if (result < -0.3) this.prevMove();
+  }
 
 	delayFix () {
 		if(this.delayState) {
