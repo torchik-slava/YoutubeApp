@@ -1,5 +1,5 @@
-body {  
-  background-color: grey;    
+body {
+  background-color: grey;
 }
 
 .search_block {
@@ -21,14 +21,14 @@ body {
   font-family: "Squishy_Alen.Rus";
   background-color: lightgrey;
   border: none;
-  outline: none;   /* tyt */  
+  outline: none;   /* tyt */
 }
 
 .search_btn {
   width: 10%;
-  background: url("../img/search.svg") center center no-repeat lightgrey;   
-  border: none; 
-  border-left: 3px solid black;  
+  background: url("../img/search.svg") center center no-repeat lightgrey;
+  border: none;
+  border-left: 3px solid black;
   cursor: pointer;
   outline: none;     /* tyt */
 }
@@ -40,10 +40,10 @@ body {
 .carousel {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   margin: 0px auto;
   width: 95vw;
-  height: 80vh;      
+  height: 80vh;
 }
 
 .arrow {
@@ -52,44 +52,44 @@ body {
   width: 7vw;
   height: 7vw;
   border: none;
-  outline: none; 
-  cursor: pointer;  
+  outline: none;
+  cursor: pointer;
   border-radius: 50%;
   background-size: cover;
-  box-shadow: 0 0 3vw rgba(0,0,0,0.5); 
+  box-shadow: 0 0 3vw rgba(0,0,0,0.5);
   visibility: hidden;
 }
 
 .arrow.prev {
-  background: url("../img/arrow-left-inactive.svg") no-repeat;  
+  background: url("../img/arrow-left-inactive.svg") no-repeat;
 }
 
 .arrow.next {
-  background: url("../img/arrow-right-inactive.svg") no-repeat; 
+  background: url("../img/arrow-right-inactive.svg") no-repeat;
 }
 
 .arrow.prev:hover {
-  background: url("../img/arrow-left-active.svg") no-repeat; 
+  background: url("../img/arrow-left-active.svg") no-repeat;
 }
 
 .arrow.next:hover {
-  background: url("../img/arrow-right-active.svg") no-repeat; 
+  background: url("../img/arrow-right-active.svg") no-repeat;
 }
 
 .ul_frame {
-  position: relative;  
-  margin: 0 auto;    
+  position: relative;
+  margin: 0 auto;
   height: 90%;
-  width: 76vw;   
-  overflow: hidden;      
+  width: 76vw;
+  overflow: hidden;
 }
 
 ul {
-  padding: 0;  
+  padding: 0;
   height: 100%;
-  width: 9999999px; 
+  width: 9999999px;
   transition: margin-left 500ms;
-  font-size: 0px;  
+  font-size: 0px;
 }
 
 .greeting p {
@@ -98,34 +98,34 @@ ul {
   height: 100%;
   padding-left: 3vw;
   text-align: center;
-  font-size: 6vmin;  
-  font-family: "Squishy_Alen.Rus";                              
+  font-size: 6vmin;
+  font-family: "Squishy_Alen.Rus";
   text-shadow: 0.1vmin 0.1vmin 0.2vmin rgba(255, 255, 255, 1); /* tyt */
 }
 
 .greeting p img {
   margin-bottom: -3px;
   width: 6vmin;        /* tyt */
-  height: 6vmin;      
+  height: 6vmin;
 }
 
 .loader {
-  display: none;  
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%; 
+  width: 100%;
   justify-content: center;
   align-items: center;
-  background: rgba(252, 252, 252, 0.5);  
+  background: rgba(252, 252, 252, 0.5);
   z-index: 100;
 }
 
 .circle_path {
-  position: relative;  
+  position: relative;
   width: 20vmin;
-  height: 20vmin;  
+  height: 20vmin;
   border: 1.2vmin solid grey;
   border-radius: 50%;
 }
@@ -135,7 +135,7 @@ ul {
   width: 5vmin;
   height: 20vmin;
   left: 7.5vmin;
-  top: 0px;    
+  top: 0px;
 }
 
 .circle {
@@ -144,7 +144,7 @@ ul {
   left: 0;
   width: 5vmin;
   height: 5vmin;
-  border-radius: 50%;  
+  border-radius: 50%;
   background: grey;
 }
 
@@ -161,24 +161,24 @@ ul {
   margin: 0;
   font-size: 5vh; /* tyt */
   width: 100%;
-  text-align: center;  
-  font-family: "Squishy_Alen.Rus"; 
-  color: black;   
-}  
+  text-align: center;
+  font-family: "Squishy_Alen.Rus";
+  color: black;
+}
 
 .card {
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-between;   
+  justify-content: space-between;
   position: relative;
   width: 18vw;
   margin: 0 0.5vw;
   height: 100%;
   box-sizing: border-box;
-  background-color: lightgrey;  
-  font-family: "Lemon/Milk [RUS by Daymarius]"; 
+  background-color: lightgrey;
+  font-family: "Lemon/Milk [RUS by Daymarius]";
   border: 2px solid black;
-  border-radius: 5px;  
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -187,10 +187,10 @@ ul {
   top: 0%;
   left: 0%;
   display: flex;
-  align-items: center; 
-  width: 100%;  
+  align-items: center;
+  width: 100%;
   height: 45%;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .video_title {
@@ -200,19 +200,19 @@ ul {
   box-sizing: border-box;
   max-height: 75%;
   width: 100%;
-  text-align: center;  
+  text-align: center;
   color: white;
   font-size: calc(24.3vh/9);
   line-height: calc(24.3vh/6);
-  text-decoration: none;  
+  text-decoration: none;
   background-color: rgba(30, 30, 30, 0.8);
-  overflow: hidden;     
+  overflow: hidden;
 }
 
 .logo {
   width: 100%;
   height: 45%;
-  filter: grayscale(100%);  
+  filter: grayscale(100%);
 }
 
 .card:hover > .logo {
@@ -226,46 +226,46 @@ ul {
 
 .video_info {
   display: flex;
-  flex-direction: column; 
-  justify-content: space-between;   
-  width: 100%;  
-  height: 30%;     
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 30%;
 }
 
 .video_info img{
-  max-height: 3vh;  
+  max-height: 3vh;
 }
 
 .video_info li {
-  display: flex;    
+  display: flex;
 }
 
-.video_info i {  
-  width: 30%;   
+.video_info i {
+  width: 30%;
 }
 
 .video_info span {
   font-size: 2vh;
   width: 70%;
-  height: 100%; 
-  
+  height: 100%;
+
 }
 
 .video_info .author span {
   white-space: nowrap;
-  overflow: hidden;   
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .video_description {
-  margin: 0 auto;  
+  margin: 0 auto;
   width: 96%;
-  height: 24%;   
+  height: 24%;
   font-size: calc(17.28vh/12);
   line-height: calc(17.28vh/8);
-  font-style: italic;  
+  font-style: italic;
   word-wrap: break-word;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
  .video_description b {
@@ -276,7 +276,7 @@ ul {
 @media screen and (max-width: 1200px) {
   .search_block{
     width: 65vw;
-  }  
+  }
 	.ul_frame {
 		width: 75vw;
 	}
@@ -287,7 +287,7 @@ ul {
   .card {
 		width: 24vw;
   	margin: 0 0.5vw;
-  }  
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -296,14 +296,14 @@ ul {
   }
   .search_btn {
     width: 15%;
-  }	
+  }
   .ul_frame {
 		width: 74vw;
-  }  
+  }
 	.card {
 		width: 36vw;
   	margin: 0 0.5vw;
-	}	
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -312,18 +312,18 @@ ul {
   }
   .search_btn {
     width: 15%;
-  }  
+  }
 	.ul_frame {
     width: 73vw;
     height: 80%;
-  }  
+  }
   .arrow {
     width: 15vw;
     height: 15vw;
   }
   .arrow.prev, .arrow.next {
     order: 2;
-  }  
+  }
   .card {
 		width: 72vw;
   	margin: 0 0.5vw;
@@ -331,14 +331,14 @@ ul {
   .video_title {
     font-size: calc(21.6vh/7.5);
     line-height: calc(21.6vh/5);
-  }	
+  }
   .video_info img {
-    max-height: 2.5vh; 
+    max-height: 2.5vh;
   }
   .video_description, .video_description b {
     font-size: calc(15.36vh/9);
     line-height: calc(15.36vh/6);
-  }	
+  }
 }
 
 @media screen and (max-height: 500px) {
@@ -360,25 +360,11 @@ ul {
   .video_title {
     font-size: calc(21.6vh/4.5);
     line-height: calc(21.6vh/3);
-  }  
+  }
   .video_description, .video_description b {
     font-size: calc(14vh/6);
     line-height: calc(14vh/4);
-  } 
-} 
-
-@font-face {
-  font-family: "Stroke(RUS BY LYAJKA)";
-  src: url("../fonts/11872.otf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Swanky and Moo Moo Cyrillic";
-  src: url("../fonts/11998.otf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+  }
 }
 
 @font-face {
